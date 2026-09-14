@@ -6,12 +6,27 @@
 
 <title>Melbin A. Andre-E | Portfolio</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Great+Vibes&display=swap" rel="stylesheet">
+
 <style>
+:root{
+    --bg:#061227;
+    --panel:#0a1a36;
+    --panel2:#0d2040;
+    --text:#ffffff;
+    --muted:#b8c7df;
+    --purple:#8e3cff;
+    --cyan:#36ddff;
+    --blue:#206bff;
+    --line:rgba(255,255,255,.10);
+}
 
 *{
-    box-sizing:border-box;
     margin:0;
     padding:0;
+    box-sizing:border-box;
 }
 
 html{
@@ -19,274 +34,491 @@ html{
 }
 
 body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#071226;
-    color:white;
-    line-height:1.6;
+    font-family:"Inter",Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    overflow-x:hidden;
 }
 
-/* NAVIGATION */
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+/* =========================
+   NAV
+========================= */
 
 nav{
+    height:86px;
+    background:#071329;
+    border-bottom:1px solid rgba(255,255,255,.08);
     position:sticky;
     top:0;
-    z-index:100;
-    background:rgba(5,15,35,.95);
-    border-bottom:1px solid rgba(255,255,255,.08);
+    z-index:999;
 }
 
-.nav-container{
-    max-width:1350px;
+.nav-wrap{
+    width:min(1400px,92%);
+    height:100%;
     margin:auto;
-    padding:20px 40px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
-    font-size:30px;
+    font-size:31px;
     font-weight:800;
+    letter-spacing:-1.5px;
 }
 
 .logo span{
-    color:#45d9ff;
+    color:var(--cyan);
 }
 
 .nav-links{
     display:flex;
-    gap:35px;
     align-items:center;
+    gap:35px;
 }
 
 .nav-links a{
-    color:#dce7ff;
-    text-decoration:none;
+    color:#dbe5f7;
     font-size:15px;
+    font-weight:500;
 }
 
 .nav-links a:hover{
-    color:#45d9ff;
+    color:var(--cyan);
 }
 
-.hire-button{
-    background:linear-gradient(90deg,#7c3aed,#a629ff);
-    padding:10px 25px;
+.nav-hire{
+    padding:13px 28px;
     border-radius:30px;
-    font-weight:bold;
+    font-weight:700;
+    background:linear-gradient(135deg,#7437ff,#b229ff);
+    box-shadow:0 0 28px rgba(126,58,255,.25);
 }
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
+    min-height:760px;
+    position:relative;
+    overflow:hidden;
+
     background:
-    radial-gradient(circle at 15% 45%,rgba(113,54,255,.25),transparent 30%),
-    radial-gradient(circle at 85% 30%,rgba(0,196,255,.13),transparent 30%),
-    #071226;
+        radial-gradient(circle at 18% 48%,rgba(104,45,255,.34),transparent 32%),
+        radial-gradient(circle at 70% 44%,rgba(20,116,255,.22),transparent 31%),
+        linear-gradient(110deg,#11173c 0%,#07152c 56%,#061227 100%);
 }
 
-.hero-container{
-    max-width:1350px;
-    width:100%;
+.hero::after{
+    content:"";
+    position:absolute;
+    width:900px;
+    height:250px;
+    right:-180px;
+    bottom:-140px;
+    transform:rotate(-8deg);
+    border-radius:50%;
+    background:linear-gradient(90deg,rgba(93,39,255,.45),rgba(21,112,255,.12));
+    filter:blur(8px);
+}
+
+.hero-inner{
+    width:min(1400px,92%);
+    min-height:670px;
     margin:auto;
-    padding:80px 40px;
+
     display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:70px;
+    grid-template-columns:1.03fr .97fr;
+    gap:35px;
     align-items:center;
+
+    position:relative;
+    z-index:5;
 }
 
-.availability{
-    display:inline-block;
-    padding:9px 18px;
-    border:1px solid #7456ff;
-    border-radius:30px;
-    color:#e4eaff;
-    margin-bottom:28px;
+/* =========================
+   HERO LEFT
+========================= */
+
+.hero-left{
+    padding-top:20px;
+}
+
+.status{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    border:1px solid #7469ff;
+    border-radius:999px;
+
+    padding:10px 17px;
+    margin-bottom:30px;
+
     font-size:14px;
+    color:#eef3ff;
+
+    background:rgba(8,19,48,.38);
 }
 
-.dot{
-    color:#2de3b7;
-    margin-right:8px;
+.status-dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    background:#1de4a9;
+    box-shadow:0 0 15px #1de4a9;
 }
 
-.hero h1{
-    font-size:72px;
+.hero-title{
+    max-width:760px;
+    font-size:clamp(55px,5vw,80px);
     line-height:1.02;
-    letter-spacing:-3px;
+    letter-spacing:-4px;
     margin-bottom:25px;
 }
 
-.gradient{
-    background:linear-gradient(90deg,#a56cff,#55a4ff,#36e0e9);
+.gradient-title{
+    background:linear-gradient(90deg,#b754ff 0%,#778cff 45%,#35ddff 100%);
     -webkit-background-clip:text;
+    background-clip:text;
     color:transparent;
 }
 
-.hero-description{
+.hero-copy{
     max-width:700px;
-    color:#c7d4ed;
+    color:#c1cde3;
     font-size:18px;
+    line-height:1.72;
     margin-bottom:28px;
 }
 
-.buttons{
+.hero-buttons{
     display:flex;
-    gap:15px;
+    gap:14px;
     flex-wrap:wrap;
-    margin-bottom:25px;
+    margin-bottom:29px;
 }
 
 .btn{
-    display:inline-block;
-    padding:14px 24px;
-    border-radius:9px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    border:1px solid #586887;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+
+    padding:15px 25px;
+    border-radius:11px;
+
+    border:1px solid #666db4;
+
+    font-weight:700;
+    font-size:16px;
+
+    transition:.2s;
 }
 
-.primary{
-    background:linear-gradient(90deg,#7638ff,#a32cff);
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+.btn-primary{
     border:none;
+    background:linear-gradient(135deg,#7041ff,#ac2dff);
+    box-shadow:0 12px 30px rgba(112,53,255,.22);
 }
 
-.contact-line{
-    color:#aebdd8;
+.contact-row{
+    display:flex;
+    gap:28px;
+    flex-wrap:wrap;
+    color:#c5cde1;
     font-size:14px;
 }
 
-/* RIGHT HERO SHOWCASE */
+.contact-row span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
 
-.showcase{
+/* =========================
+   HERO PHOTO
+========================= */
+
+.hero-right{
     position:relative;
-    padding:45px;
-    border-radius:28px;
-    background:
-    radial-gradient(circle at 50% 0%,rgba(77,97,255,.22),transparent 45%),
-    rgba(15,30,61,.72);
-    border:1px solid rgba(130,155,255,.25);
-    box-shadow:0 30px 80px rgba(0,0,0,.35);
-    overflow:hidden;
+    height:650px;
 }
 
-.showcase::before{
-    content:"";
+.glow-ring-outer{
     position:absolute;
-    width:230px;
-    height:230px;
+    width:510px;
+    height:510px;
     border-radius:50%;
-    background:#633cff;
-    filter:blur(110px);
-    opacity:.25;
-    right:-50px;
-    top:-50px;
+    left:47%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    border:3px solid rgba(130,65,255,.65);
+    box-shadow:
+        0 0 35px rgba(96,63,255,.35),
+        inset 0 0 35px rgba(88,80,255,.18);
 }
 
-.showcase-label{
-    color:#4edcff;
-    font-size:13px;
+.glow-ring-inner{
+    position:absolute;
+    width:440px;
+    height:440px;
+    border-radius:50%;
+    left:47%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    background:
+        radial-gradient(circle at 48% 42%,
+        #2f8bff 0%,
+        #3557e6 36%,
+        #4332be 57%,
+        rgba(54,37,152,.2) 72%,
+        transparent 73%);
+    box-shadow:0 0 90px rgba(31,104,255,.35);
+}
+
+.profile-photo{
+    position:absolute;
+    z-index:5;
+
+    left:47%;
+    bottom:-2px;
+    transform:translateX(-50%);
+
+    width:560px;
+    max-height:635px;
+
+    object-fit:contain;
+    object-position:center bottom;
+
+    filter:drop-shadow(0 25px 30px rgba(0,0,0,.35));
+}
+
+/* =========================
+   NAME + ROLE RIGHT SIDE
+========================= */
+
+.identity{
+    position:absolute;
+    z-index:8;
+    right:-5px;
+    top:105px;
+    width:285px;
+}
+
+.signature-main{
+    font-family:"Great Vibes",cursive;
+    font-size:65px;
+    line-height:.8;
+    color:#3cdcff;
+
+    text-shadow:0 0 18px rgba(60,220,255,.25);
+}
+
+.signature-sub{
+    font-family:"Great Vibes",cursive;
+    font-size:38px;
+    color:#56d8ff;
+
+    margin-left:35px;
+    margin-top:-4px;
+
+    padding-bottom:5px;
+
+    border-bottom:3px solid #58cfff;
+}
+
+.role-pill{
+    margin-top:22px;
+    width:max-content;
+
+    border:1px solid #7786c4;
+    border-radius:999px;
+
+    padding:11px 18px;
+
+    font-size:12px;
+    font-weight:700;
     letter-spacing:3px;
-    font-weight:bold;
-    margin-bottom:18px;
 }
 
-.showcase h2{
-    font-size:53px;
-    line-height:1;
-    margin-bottom:20px;
-}
+/* =========================
+   CREATE / EDIT / INNOVATE
+========================= */
 
-.showcase h2 span{
-    background:linear-gradient(90deg,#a56cff,#45dcff);
-    -webkit-background-clip:text;
-    color:transparent;
-}
-
-.showcase-description{
-    color:#bdcbe4;
-    margin-bottom:28px;
-}
-
-.services-grid{
+.values{
+    margin-top:28px;
     display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
+    gap:15px;
 }
 
-.service-box{
-    padding:20px;
-    background:rgba(255,255,255,.05);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:14px;
+.value{
+    display:grid;
+    grid-template-columns:48px 1fr;
+    gap:15px;
+    align-items:center;
 }
 
-.service-box strong{
+.value-icon{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+
+    display:grid;
+    place-items:center;
+
+    font-size:21px;
+
+    border:2px solid #5f7cff;
+    box-shadow:0 0 18px rgba(82,97,255,.18);
+}
+
+.value:nth-child(2) .value-icon{
+    border-color:#8d52ff;
+}
+
+.value:nth-child(3) .value-icon{
+    border-color:#3bd9ff;
+}
+
+.value:nth-child(4) .value-icon{
+    border-color:#67a0ff;
+}
+
+.value strong{
     display:block;
-    margin-bottom:5px;
+    font-size:14px;
+    letter-spacing:3px;
+}
+
+.value small{
+    color:#9baccc;
+    font-size:11px;
+    letter-spacing:3px;
+}
+
+/* =========================
+   SKILL BAR
+========================= */
+
+.skills-bar{
+    position:absolute;
+    z-index:20;
+    left:50%;
+    bottom:-53px;
+
+    transform:translateX(-50%);
+
+    width:min(1370px,91%);
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    border-radius:25px;
+    overflow:hidden;
+
+    background:rgba(9,25,55,.98);
+    border:1px solid rgba(105,118,255,.45);
+
+    box-shadow:
+        0 28px 70px rgba(0,0,0,.35),
+        inset 0 0 30px rgba(40,77,169,.08);
+}
+
+.skill{
+    min-height:126px;
+    padding:25px 30px;
+
+    display:grid;
+    grid-template-columns:65px 1fr;
+    gap:15px;
+    align-items:center;
+
+    border-right:1px solid rgba(255,255,255,.1);
+}
+
+.skill:last-child{
+    border-right:none;
+}
+
+.skill-icon{
+    width:58px;
+    height:58px;
+    display:grid;
+    place-items:center;
+
+    border-radius:14px;
+
+    font-size:30px;
+
+    color:#fff;
+
+    text-shadow:0 0 15px currentColor;
+}
+
+.skill:nth-child(1) .skill-icon{color:#cf56ff}
+.skill:nth-child(2) .skill-icon{color:#8756ff}
+.skill:nth-child(3) .skill-icon{color:#446dff}
+.skill:nth-child(4) .skill-icon{color:#33d6ff}
+
+.skill h3{
     font-size:16px;
+    margin-bottom:5px;
 }
 
-.service-box small{
-    color:#aabbd8;
+.skill p{
+    font-size:13px;
+    color:#9fb0cc;
 }
 
-/* GENERAL SECTIONS */
+/* =========================
+   MAIN SECTIONS
+========================= */
 
-section{
-    padding:90px 40px;
+.section{
+    padding:120px 30px 80px;
 }
 
-.section-container{
-    max-width:1200px;
+.section-inner{
+    width:min(1180px,92%);
     margin:auto;
 }
 
 .section-title{
     text-align:center;
-    font-size:42px;
+    font-size:40px;
     margin-bottom:12px;
 }
 
-.section-subtitle{
+.section-sub{
     text-align:center;
-    color:#9fb0cc;
-    margin-bottom:50px;
+    color:#9fb0ca;
+    margin-bottom:42px;
 }
-
-/* ABOUT */
-
-.about-text{
-    max-width:850px;
-    margin:auto;
-    text-align:center;
-    font-size:18px;
-    color:#c4d1e8;
-}
-
-/* SERVICES */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
+    grid-template-columns:repeat(2,1fr);
     gap:20px;
 }
 
 .card{
-    background:#101e3a;
-    border:1px solid rgba(255,255,255,.08);
-    padding:30px 24px;
-    border-radius:18px;
-}
+    padding:28px;
+    border-radius:20px;
 
-.card-icon{
-    font-size:35px;
-    margin-bottom:15px;
+    background:#0e1e3d;
+    border:1px solid var(--line);
 }
 
 .card h3{
@@ -294,187 +526,207 @@ section{
 }
 
 .card p{
-    color:#aebdd6;
-    font-size:15px;
+    color:#aebdd7;
+    line-height:1.7;
 }
 
-/* TOOLS */
-
-.tools{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
-}
-
-.tool{
-    padding:12px 22px;
-    border-radius:30px;
-    background:#101e3a;
-    border:1px solid #263d65;
-}
-
-/* EXPERIENCE */
-
-.experience-box{
-    max-width:850px;
-    margin:auto;
-    background:#101e3a;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:35px;
-}
-
-.experience-box h3{
-    color:#4edcff;
-    margin-bottom:10px;
-}
-
-.experience-box p{
-    color:#b8c6dd;
-}
-
-/* PROJECT */
+/* =========================
+   PROJECT
+========================= */
 
 .project{
-    max-width:850px;
+    max-width:900px;
     margin:auto;
-    background:#101e3a;
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:22px;
+
     overflow:hidden;
+
+    border-radius:22px;
+
+    background:#0e1e3d;
+    border:1px solid var(--line);
 }
 
 .project video{
     width:100%;
+    max-height:560px;
     display:block;
-    background:black;
+    background:#000;
 }
 
-.project-content{
+.project-info{
     padding:28px;
 }
 
-.project-content h3{
-    font-size:25px;
-    margin-bottom:8px;
+.project-info p{
+    color:#aebbd5;
+    margin-top:8px;
 }
 
-.project-content p{
-    color:#aebdd6;
-}
-
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact-box{
-    max-width:750px;
+    max-width:800px;
     margin:auto;
+
     text-align:center;
-    padding:50px;
-    border-radius:25px;
-    background:linear-gradient(
-        135deg,
-        rgba(92,54,255,.18),
-        rgba(23,181,255,.10)
-    );
-    border:1px solid rgba(124,118,255,.25);
+
+    border-radius:28px;
+    padding:50px 30px;
+
+    background:
+        linear-gradient(135deg,rgba(112,61,255,.18),rgba(35,177,255,.10));
+
+    border:1px solid rgba(106,103,255,.35);
 }
 
 .contact-box p{
-    color:#b9c7de;
-    margin:15px 0 25px;
+    color:#b7c4db;
+    margin:14px 0 24px;
 }
-
-/* FOOTER */
 
 footer{
-    text-align:center;
     padding:30px;
-    border-top:1px solid rgba(255,255,255,.08);
-    color:#8292ad;
+    text-align:center;
+    border-top:1px solid var(--line);
+    color:#7f91ad;
 }
 
-/* MOBILE */
+/* =========================
+   TABLET
+========================= */
 
-@media(max-width:900px){
+@media(max-width:1050px){
 
-    .nav-links{
+    .hero-inner{
+        grid-template-columns:1fr;
+        text-align:center;
+        padding-top:50px;
+    }
+
+    .hero-left{
+        margin:auto;
+    }
+
+    .hero-copy{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons,
+    .contact-row{
+        justify-content:center;
+    }
+
+    .hero-right{
+        height:650px;
+    }
+
+    .identity{
+        right:2%;
+    }
+
+    .skills-bar{
+        position:relative;
+        left:auto;
+        bottom:auto;
+        transform:none;
+        margin:0 auto;
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero{
+        padding-bottom:40px;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:720px){
+
+    nav{
+        height:72px;
+    }
+
+    .nav-links a:not(.nav-hire){
         display:none;
     }
 
-    .hero-container{
-        grid-template-columns:1fr;
-    }
-
-    .hero h1{
-        font-size:55px;
-    }
-
-    .showcase h2{
-        font-size:42px;
-    }
-
-    .cards{
-        grid-template-columns:1fr 1fr;
-    }
-}
-
-@media(max-width:600px){
-
-    .nav-container{
-        padding:18px 20px;
-    }
-
-    .hero-container{
-        padding:60px 20px;
-    }
-
-    section{
-        padding:70px 20px;
-    }
-
-    .hero h1{
-        font-size:43px;
+    .hero-title{
+        font-size:47px;
         letter-spacing:-2px;
     }
 
-    .showcase{
-        padding:30px 22px;
+    .hero-copy{
+        font-size:16px;
     }
 
-    .showcase h2{
-        font-size:38px;
+    .hero-right{
+        height:500px;
     }
 
-    .services-grid,
+    .glow-ring-outer{
+        width:330px;
+        height:330px;
+    }
+
+    .glow-ring-inner{
+        width:285px;
+        height:285px;
+    }
+
+    .profile-photo{
+        width:390px;
+        max-height:500px;
+    }
+
+    .identity{
+        display:none;
+    }
+
+    .skills-bar{
+        grid-template-columns:1fr;
+    }
+
+    .skill{
+        border-right:none;
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
     .cards{
         grid-template-columns:1fr;
     }
 }
-
 </style>
 </head>
-
 
 <body>
 
 <!-- NAVIGATION -->
 
 <nav>
-<div class="nav-container">
+<div class="nav-wrap">
 
 <div class="logo">
 Melbin<span>.</span>
 </div>
 
 <div class="nav-links">
+
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#tools">Tools</a>
 <a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
-<a href="#contact" class="hire-button">Hire Me</a>
+
+<a href="#contact" class="nav-hire">
+Hire Me
+</a>
+
 </div>
 
 </div>
@@ -483,302 +735,641 @@ Melbin<span>.</span>
 
 <!-- HERO -->
 
-<header class="hero">
+<section class="hero">
 
-<div class="hero-container">
+<div class="hero-inner">
 
-<div>
 
-<div class="availability">
-<span class="dot">●</span>
+<!-- LEFT -->
+
+<div class="hero-left">
+
+<div class="status">
+
+<span class="status-dot"></span>
+
 Available for Remote Work • Full-Time or Part-Time
+
 </div>
 
-<h1>
-Video Editor &<br>
-<span class="gradient">AI Content Creator</span>
+
+<h1 class="hero-title">
+
+Video Editor &
+
+<br>
+
+<span class="gradient-title">
+AI Content Creator
+</span>
+
 </h1>
 
-<p class="hero-description">
-I create engaging short-form videos, AI-assisted visuals,
-social media content, educational materials, and creative
-digital experiences. I combine storytelling, editing, AI tools,
-and communication to turn ideas into polished content.
+
+<p class="hero-copy">
+
+I create engaging short-form videos,
+AI-assisted visuals,
+social media content,
+educational materials,
+and creative digital experiences.
+
+I combine storytelling,
+editing,
+AI tools,
+and communication
+to turn ideas into polished content.
+
 </p>
 
-<div class="buttons">
 
-<a href="#projects" class="btn primary">
+<div class="hero-buttons">
+
+<a
+href="#projects"
+class="btn btn-primary"
+>
 ▶ View My Work
 </a>
 
-<a href="mailto:melbinandree09@gmail.com" class="btn">
+<a
+href="mailto:melbinandree09@gmail.com"
+class="btn"
+>
 ✉ Hire Me
 </a>
 
 </div>
 
-<div class="contact-line">
-📍 Philippines &nbsp;&nbsp;&nbsp;
-✉ melbinandree09@gmail.com &nbsp;&nbsp;&nbsp;
+
+<div class="contact-row">
+
+<span>
+📍 Philippines
+</span>
+
+<span>
+✉ melbinandree09@gmail.com
+</span>
+
+<span>
 ☎ +63 910 326 2758
+</span>
+
+</div>
+
+</div>
+
+
+<!-- RIGHT -->
+
+<div class="hero-right">
+
+
+<div class="glow-ring-outer"></div>
+
+<div class="glow-ring-inner"></div>
+
+
+<img
+src="profile-photo.png"
+alt="Melbin A. Andre-E"
+class="profile-photo"
+>
+
+
+<div class="identity">
+
+<div class="signature-main">
+Melbin
+</div>
+
+<div class="signature-sub">
+A. Andre-E
+</div>
+
+
+<div class="role-pill">
+VIDEO EDITOR &nbsp; | &nbsp; AI CREATOR
+</div>
+
+
+<div class="values">
+
+
+<div class="value">
+
+<div class="value-icon">
+💡
+</div>
+
+<div>
+
+<strong>
+CREATE
+</strong>
+
+<small>
+IDEAS
+</small>
+
 </div>
 
 </div>
 
 
-<!-- RIGHT SIDE -->
+<div class="value">
 
-<div class="showcase">
-
-<div class="showcase-label">
-CREATIVE DIGITAL SPECIALIST
+<div class="value-icon">
+▶
 </div>
 
-<h2>
-Create.<br>
-Edit.<br>
-<span>Innovate.</span>
-</h2>
+<div>
 
-<p class="showcase-description">
-Helping brands, businesses, and creators transform ideas
-into engaging digital content.
+<strong>
+EDIT
+</strong>
+
+<small>
+STORIES
+</small>
+
+</div>
+
+</div>
+
+
+<div class="value">
+
+<div class="value-icon">
+🤖
+</div>
+
+<div>
+
+<strong>
+INNOVATE
+</strong>
+
+<small>
+WITH AI
+</small>
+
+</div>
+
+</div>
+
+
+<div class="value">
+
+<div class="value-icon">
+👥
+</div>
+
+<div>
+
+<strong>
+INSPIRE
+</strong>
+
+<small>
+PEOPLE
+</small>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<!-- SKILL BAR -->
+
+<div class="skills-bar">
+
+
+<div class="skill">
+
+<div class="skill-icon">
+🎥
+</div>
+
+<div>
+
+<h3>
+Video Editing
+</h3>
+
+<p>
+Short-form & Social Media
 </p>
 
-<div class="services-grid">
-
-<div class="service-box">
-<strong>🎥 Video Editing</strong>
-<small>Short-form & social media content</small>
-</div>
-
-<div class="service-box">
-<strong>✨ AI Content</strong>
-<small>Prompts, visuals & creative concepts</small>
-</div>
-
-<div class="service-box">
-<strong>🎨 Canva</strong>
-<small>Graphics & presentations</small>
-</div>
-
-<div class="service-box">
-<strong>💻 Virtual Assistance</strong>
-<small>Research & administrative support</small>
 </div>
 
 </div>
 
+
+<div class="skill">
+
+<div class="skill-icon">
+✦
+</div>
+
+<div>
+
+<h3>
+AI Content
+</h3>
+
+<p>
+Prompts, Visuals & Concepts
+</p>
+
 </div>
 
 </div>
-</header>
+
+
+<div class="skill">
+
+<div class="skill-icon">
+🎨
+</div>
+
+<div>
+
+<h3>
+Canva Design
+</h3>
+
+<p>
+Graphics & Presentations
+</p>
+
+</div>
+
+</div>
+
+
+<div class="skill">
+
+<div class="skill-icon">
+💻
+</div>
+
+<div>
+
+<h3>
+Virtual Assistance
+</h3>
+
+<p>
+Research & Admin Support
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</section>
 
 
 <!-- ABOUT -->
 
-<section id="about">
+<section class="section" id="about">
 
-<div class="section-container">
+<div class="section-inner">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title">
+About Me
+</h2>
 
-<p class="section-subtitle">
-Creative content, digital tools, and reliable support.
+<p class="section-sub">
+Creative content, technology, and reliable digital support.
 </p>
 
-<p class="about-text">
-I am a Video Editor, AI Content Creator, Social Media Content
-Creator, and Virtual Assistant. I enjoy transforming ideas into
-clear, engaging, and professional digital content. My work
-combines creativity, technology, organization, and attention
-to detail.
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+Creative Content
+</h3>
+
+<p>
+
+I create short-form videos,
+AI-assisted concepts,
+visual content,
+scripts,
+prompts,
+storyboards,
+and promotional materials.
+
 </p>
 
 </div>
+
+
+<div class="card">
+
+<h3>
+Reliable Support
+</h3>
+
+<p>
+
+I am detail-oriented,
+organized,
+adaptable,
+and comfortable supporting clients
+with creative and administrative work.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
 </section>
 
 
 <!-- SERVICES -->
 
-<section id="services">
+<section class="section" id="services">
 
-<div class="section-container">
+<div class="section-inner">
 
-<h2 class="section-title">What I Can Do</h2>
+<h2 class="section-title">
+Services
+</h2>
 
-<p class="section-subtitle">
-Creative and administrative support for your digital projects.
+<p class="section-sub">
+How I can support your brand, business, or project.
 </p>
+
 
 <div class="cards">
 
+
 <div class="card">
-<div class="card-icon">🎥</div>
-<h3>Video Editing</h3>
+<h3>🎬 Video Editing</h3>
 <p>
-Short-form videos, promotional content, social media videos,
-and engaging visual storytelling.
+Short-form videos,
+Reels,
+TikTok content,
+promotional videos,
+transitions,
+captions,
+music,
+and effects.
 </p>
 </div>
 
+
 <div class="card">
-<div class="card-icon">✨</div>
-<h3>AI Content Creation</h3>
+<h3>✨ AI Content Creation</h3>
 <p>
-AI-assisted concepts, visual prompts, promotional ideas,
-creative scenes, and digital content.
+AI video concepts,
+AI image prompts,
+scripts,
+storyboards,
+product concepts,
+and creative visual development.
 </p>
 </div>
 
+
 <div class="card">
-<div class="card-icon">🎨</div>
-<h3>Social Media Content</h3>
+<h3>🎨 Social Media Content</h3>
 <p>
-Reels and TikTok concepts, captions, hooks, promotional
-posts, and product descriptions.
+Hooks,
+captions,
+social posts,
+content ideas,
+product descriptions,
+and promotional concepts.
 </p>
 </div>
 
+
 <div class="card">
-<div class="card-icon">💻</div>
-<h3>Virtual Assistance</h3>
+<h3>💻 Virtual Assistance</h3>
 <p>
-Research, administrative support, document organization,
-data handling, and online assistance.
+Online research,
+data entry,
+document preparation,
+file organization,
+and administrative support.
 </p>
 </div>
 
+
 </div>
 
 </div>
+
 </section>
 
 
 <!-- TOOLS -->
 
-<section id="tools">
+<section class="section" id="tools">
 
-<div class="section-container">
+<div class="section-inner">
 
-<h2 class="section-title">Tools I Use</h2>
+<h2 class="section-title">
+Tools I Use
+</h2>
 
-<p class="section-subtitle">
-Tools that help me create, organize, and deliver digital work.
+<p class="section-sub">
+CapCut • Canva • ChatGPT • Google Flow • Microsoft Office • Google Workspace
 </p>
 
-<div class="tools">
-
-<div class="tool">Canva</div>
-<div class="tool">CapCut</div>
-<div class="tool">Google Workspace</div>
-<div class="tool">AI Tools</div>
-<div class="tool">Google Flow</div>
-<div class="tool">Microsoft Office</div>
-<div class="tool">Social Media Platforms</div>
-
 </div>
 
-</div>
 </section>
 
 
 <!-- EXPERIENCE -->
 
-<section id="experience">
+<section class="section" id="experience">
 
-<div class="section-container">
+<div class="section-inner">
 
-<h2 class="section-title">Experience</h2>
+<h2 class="section-title">
+Experience
+</h2>
 
-<p class="section-subtitle">
-Creative, administrative, and digital support experience.
+<p class="section-sub">
+Creative, educational, and digital support experience.
 </p>
 
-<div class="experience-box">
 
-<h3>Administrative & Digital Support</h3>
+<div class="cards">
+
+
+<div class="card">
+
+<h3>
+AI Content Creation & Video Editing
+</h3>
 
 <p>
-Experienced in administrative support, document handling,
-communication, online research, digital content creation,
-and managing multiple tasks while maintaining accuracy
-and attention to detail.
+Creating AI-assisted concepts,
+scripts,
+prompts,
+visual scenes,
+storyboards,
+and edited short-form digital content.
 </p>
 
 </div>
 
+
+<div class="card">
+
+<h3>
+Educational & Digital Content
+</h3>
+
+<p>
+Creating presentations,
+worksheets,
+visual learning materials,
+digital content,
+and organized instructional resources.
+</p>
+
 </div>
+
+
+</div>
+
+</div>
+
 </section>
 
 
-<!-- PROJECTS -->
+<!-- PROJECT -->
 
-<section id="projects">
+<section class="section" id="projects">
 
-<div class="section-container">
+<div class="section-inner">
 
-<h2 class="section-title">Selected Work</h2>
+<h2 class="section-title">
+Selected Work
+</h2>
 
-<p class="section-subtitle">
-A sample of my creative video and AI-assisted content work.
+<p class="section-sub">
+A sample of my creative video and AI-assisted work.
 </p>
+
 
 <div class="project">
 
+
 <video controls playsinline>
-<source src="project placeholder.mp4" type="video/mp4">
+
+<source
+src="project placeholder.mp4"
+type="video/mp4"
+>
+
 Your browser does not support video playback.
+
 </video>
 
-<div class="project-content">
 
-<h3>Short-Form Video Project</h3>
+<div class="project-info">
+
+<h3>
+AI Short-Form Video Project
+</h3>
 
 <p>
-Creative video project demonstrating visual storytelling,
-editing, and digital content creation for social media.
+
+Creative project demonstrating
+AI-assisted concept development,
+visual storytelling,
+prompt creation,
+and video editing.
+
 </p>
 
 </div>
 
+
 </div>
 
 </div>
+
 </section>
 
 
 <!-- CONTACT -->
 
-<section id="contact">
+<section class="section" id="contact">
 
-<div class="section-container">
+<div class="section-inner">
 
 <div class="contact-box">
 
-<h2>Let's Work Together</h2>
+<h2>
+Let's Work Together
+</h2>
 
 <p>
-Need help with video editing, AI content, social media
-content, or virtual assistance? I would be happy to discuss
-your project.
+
+Need help with video editing,
+AI content,
+social media content,
+or virtual assistance?
+
+Let's discuss your project.
+
 </p>
 
-<a href="mailto:melbinandree09@gmail.com"
-class="btn primary">
+
+<a
+href="mailto:melbinandree09@gmail.com"
+class="btn btn-primary"
+>
+
 ✉ Contact Me
+
 </a>
 
+
 </div>
 
 </div>
+
 </section>
 
 
 <footer>
 
-© 2026 Melbin A. Andre-E • Video Editor & AI Content Creator
+© 2026 Melbin A. Andre-E
+• Video Editor & AI Content Creator
 
 </footer>
 
