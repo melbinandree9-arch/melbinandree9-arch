@@ -1,1267 +1,1676 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Melbin A. Andre-E | Portfolio</title>
+<title>Melbin A. Andre-E | Portfolio</title>
 
-  <meta
-    name="description"
-    content="Portfolio of Melbin A. Andre-E — Video Editor, AI Content Creator and Virtual Assistant."
-  >
+<style>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+/* ================================
+   RESET
+================================ */
 
-    html {
-      scroll-behavior: smooth;
-    }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #070d20;
-      color: #ffffff;
-      line-height: 1.6;
-    }
+html{
+    scroll-behavior:smooth;
+}
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#061025;
+    color:white;
+    overflow-x:hidden;
+}
 
-    /* =========================
-       NAVIGATION
-    ========================== */
+a{
+    text-decoration:none;
+    color:inherit;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
 
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+/* ================================
+   NAVIGATION
+================================ */
 
-      padding: 20px 6%;
+nav{
+    height:74px;
 
-      background: rgba(7, 13, 32, 0.94);
-      backdrop-filter: blur(12px);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
+    padding:0 6%;
 
-    .logo {
-      font-size: 29px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
+    background:rgba(5,14,34,.96);
 
-    .logo span {
-      color: #42d7ff;
-    }
+    border-bottom:1px solid rgba(255,255,255,.09);
 
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 30px;
-    }
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-    .nav-links a {
-      color: #cbd4ef;
-      font-size: 15px;
-      transition: 0.25s;
-    }
+.logo{
+    font-size:31px;
+    font-weight:800;
+}
 
-    .nav-links a:hover {
-      color: #ffffff;
-    }
+.logo span{
+    color:#30d5ff;
+}
 
-    .nav-hire {
-      padding: 11px 25px;
-      border-radius: 30px;
-      background: linear-gradient(135deg, #7c3cff, #9e32ff);
-      color: white !important;
-      font-weight: bold;
-    }
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:34px;
+}
 
-    /* =========================
-       HERO
-    ========================== */
+.nav-links a{
+    color:#c9d3eb;
+    font-size:15px;
+}
 
-    .hero {
-      min-height: 92vh;
+.nav-links a:hover{
+    color:white;
+}
 
-      display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      align-items: center;
+.nav-hire{
+    background:linear-gradient(135deg,#7138ff,#a32eff);
 
-      gap: 50px;
+    padding:12px 28px;
 
-      padding: 70px 6% 60px;
+    border-radius:30px;
 
-      overflow: hidden;
+    color:white !important;
 
-      background:
-        radial-gradient(circle at 17% 35%,
-        rgba(116, 57, 255, 0.23),
-        transparent 34%),
+    font-weight:700;
+}
 
-        radial-gradient(circle at 78% 35%,
-        rgba(0, 188, 255, 0.13),
-        transparent 30%),
 
-        #070d20;
-    }
+/* ================================
+   HERO
+================================ */
 
-    .hero-left {
-      max-width: 760px;
-    }
+.hero{
 
-    .availability {
-      display: inline-flex;
-      align-items: center;
-      gap: 9px;
+    min-height:780px;
 
-      padding: 9px 16px;
-      margin-bottom: 28px;
+    position:relative;
 
-      border: 1px solid #7659ff;
-      border-radius: 50px;
+    display:grid;
 
-      color: #e2e7ff;
-      font-size: 14px;
-    }
+    grid-template-columns:1fr 1fr;
 
-    .status-dot {
-      width: 10px;
-      height: 10px;
-      background: #28e5a5;
-      border-radius: 50%;
-      box-shadow: 0 0 15px #28e5a5;
-    }
+    align-items:center;
 
-    .hero h1 {
-      font-size: clamp(52px, 5.2vw, 82px);
-      line-height: 1.02;
-      letter-spacing: -3px;
-      margin-bottom: 24px;
-    }
+    padding:70px 6% 110px;
 
-    .gradient-text {
-      background: linear-gradient(
+    background:
+
+    radial-gradient(
+        circle at 20% 45%,
+        rgba(86,39,255,.32),
+        transparent 34%
+    ),
+
+    radial-gradient(
+        circle at 70% 38%,
+        rgba(0,122,255,.18),
+        transparent 32%
+    ),
+
+    linear-gradient(
+        120deg,
+        #111439 0%,
+        #071124 55%,
+        #051022 100%
+    );
+
+}
+
+
+/* LEFT */
+
+.hero-left{
+    position:relative;
+    z-index:5;
+
+    max-width:720px;
+}
+
+.availability{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:10px 18px;
+
+    border:1px solid #7367ff;
+
+    border-radius:40px;
+
+    margin-bottom:35px;
+
+    color:#e6eaff;
+
+    font-size:14px;
+}
+
+.status-dot{
+
+    width:11px;
+    height:11px;
+
+    border-radius:50%;
+
+    background:#20e5ad;
+
+    box-shadow:0 0 15px #20e5ad;
+}
+
+
+.hero h1{
+
+    font-size:clamp(58px,5.2vw,88px);
+
+    line-height:1.02;
+
+    letter-spacing:-3px;
+
+    margin-bottom:26px;
+}
+
+.gradient-text{
+
+    background:linear-gradient(
         90deg,
-        #a46cff,
-        #768fff,
-        #36d7ff
-      );
+        #ac67ff,
+        #7f84ff,
+        #3ed4ff
+    );
 
-      -webkit-background-clip: text;
-      background-clip: text;
+    -webkit-background-clip:text;
+    background-clip:text;
 
-      color: transparent;
-    }
+    color:transparent;
+}
 
-    .hero-description {
-      max-width: 680px;
 
-      color: #c2ccec;
-      font-size: 18px;
-      line-height: 1.75;
+.hero-description{
 
-      margin-bottom: 30px;
-    }
+    max-width:670px;
 
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    font-size:18px;
 
-      margin-bottom: 28px;
-    }
+    line-height:1.8;
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
+    color:#c3cdeb;
 
-      padding: 14px 24px;
+    margin-bottom:30px;
+}
 
-      border-radius: 9px;
-      border: 1px solid #5c6687;
 
-      font-weight: 700;
+/* BUTTONS */
 
-      transition: 0.25s;
-    }
+.buttons{
 
-    .btn-primary {
-      border: none;
+    display:flex;
 
-      background: linear-gradient(
+    flex-wrap:wrap;
+
+    gap:12px;
+
+    margin-bottom:32px;
+}
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    padding:14px 23px;
+
+    border-radius:9px;
+
+    border:1px solid #6558a8;
+
+    color:white;
+
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 30px rgba(99,61,255,.25);
+}
+
+.btn-primary{
+
+    border:none;
+
+    background:linear-gradient(
         135deg,
-        #713cff,
-        #9d32ff
-      );
-    }
+        #7135ff,
+        #9b31ff
+    );
+}
 
-    .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(80, 76, 255, 0.25);
-    }
 
-    .contact-mini {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
+/* CONTACT ROW */
 
-      color: #aeb9d8;
-      font-size: 14px;
-    }
+.contact-mini{
 
-    /* =========================
-       LARGE PROFILE PHOTO
-    ========================== */
+    display:flex;
 
-    .hero-right {
-      position: relative;
+    flex-wrap:wrap;
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    gap:30px;
 
-      min-height: 650px;
-    }
+    color:#bec8e5;
 
-    .photo-glow {
-      position: absolute;
+    font-size:14px;
+}
 
-      width: 500px;
-      height: 500px;
 
-      border-radius: 50%;
+/* ================================
+   RIGHT SIDE PHOTO
+================================ */
 
-      background:
-        radial-gradient(
-          circle,
-          rgba(64, 131, 255, 0.48),
-          rgba(91, 55, 255, 0.20) 45%,
-          transparent 70%
+.hero-right{
+
+    position:relative;
+
+    height:650px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+}
+
+
+/* glowing frame */
+
+.glow-frame{
+
+    position:absolute;
+
+    width:480px;
+    height:470px;
+
+    bottom:55px;
+
+    border-radius:32px;
+
+    border:2px solid #744dff;
+
+    background:
+
+    radial-gradient(
+        circle at center,
+        rgba(27,152,255,.8) 0%,
+        rgba(57,79,230,.65) 35%,
+        rgba(70,35,160,.38) 60%,
+        rgba(14,22,55,.2) 75%
+    );
+
+    box-shadow:
+
+    0 0 80px rgba(60,72,255,.30),
+
+    inset 0 0 70px rgba(49,85,255,.25);
+}
+
+
+/* background circle */
+
+.glow-circle{
+
+    position:absolute;
+
+    width:390px;
+    height:390px;
+
+    bottom:90px;
+
+    border-radius:50%;
+
+    background:
+
+    radial-gradient(
+        circle,
+        #187eff 0%,
+        #4356e8 46%,
+        rgba(61,55,184,.20) 70%
+    );
+
+    opacity:.82;
+}
+
+
+/* YOUR PHOTO */
+
+.profile-photo{
+
+    position:absolute;
+
+    z-index:5;
+
+    bottom:0;
+
+    width:560px;
+
+    max-height:660px;
+
+    object-fit:contain;
+
+    object-position:center bottom;
+
+    filter:
+
+        drop-shadow(
+            0 20px 30px
+            rgba(0,0,0,.30)
         );
+}
 
-      filter: blur(5px);
-    }
 
-    .photo-card {
-      position: relative;
-      z-index: 2;
+/* SIGNATURE */
 
-      width: min(100%, 560px);
-      height: 610px;
+.signature{
 
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
+    position:absolute;
 
-      overflow: hidden;
+    z-index:6;
 
-      border-radius: 40px;
+    right:-70px;
 
-      border: 2px solid rgba(128, 83, 255, 0.8);
+    bottom:240px;
 
-      background:
-        radial-gradient(
-          circle at center,
-          rgba(57, 125, 255, 0.65),
-          rgba(32, 38, 93, 0.6) 48%,
-          rgba(17, 25, 56, 0.92) 75%
-        );
+    transform:rotate(-5deg);
+}
 
-      box-shadow:
-        0 0 70px rgba(91, 63, 255, 0.24);
-    }
+.signature-name{
 
-    /*
-      THIS CONTROLS THE SIZE OF YOUR PHOTO.
-      Increase width if you want it even bigger.
-    */
+    font-size:29px;
 
-    .profile-photo {
-      width: 100%;
-      height: 100%;
+    font-family:cursive;
 
-      object-fit: contain;
-      object-position: center bottom;
+    color:#45d5ff;
 
-      display: block;
+    text-shadow:
+    0 0 14px rgba(69,213,255,.5);
 
-      transform: scale(1.12);
-      transform-origin: center bottom;
-    }
+    border-bottom:3px solid #70cfff;
 
-    .signature-card {
-      position: absolute;
-      z-index: 4;
+    padding-bottom:4px;
+}
 
-      right: -25px;
-      bottom: 85px;
+.signature-words{
 
-      padding: 15px 20px;
+    margin-top:18px;
 
-      background: rgba(8, 16, 39, 0.88);
+    margin-left:45px;
 
-      border: 1px solid rgba(112, 139, 255, 0.35);
-      border-radius: 15px;
+    font-size:11px;
 
-      box-shadow: 0 15px 35px rgba(0,0,0,.25);
-    }
+    line-height:1.8;
 
-    .signature-card h3 {
-      color: #51d9ff;
-      font-size: 19px;
-    }
+    letter-spacing:5px;
 
-    .signature-card p {
-      color: #9ba8cc;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
+    color:#bac7ea;
+}
 
-    /* =========================
-       SKILLS
-    ========================== */
 
-    .skills {
-      position: relative;
-      z-index: 10;
+/* ================================
+   SERVICE PANEL
+================================ */
 
-      max-width: 1180px;
+.service-panel{
 
-      margin: -45px auto 0;
-      padding: 0 25px;
-    }
+    position:absolute;
 
-    .skill-box {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    z-index:20;
 
-      background: rgba(16, 27, 59, 0.96);
+    right:5%;
 
-      border: 1px solid rgba(123, 140, 193, 0.25);
-      border-radius: 22px;
-
-      overflow: hidden;
-
-      box-shadow: 0 25px 70px rgba(0,0,0,.25);
-    }
-
-    .skill {
-      padding: 28px 22px;
-      text-align: center;
+    bottom:-55px;
 
-      border-right: 1px solid rgba(255,255,255,.08);
-    }
+    width:680px;
 
-    .skill:last-child {
-      border-right: none;
-    }
+    display:grid;
 
-    .skill-icon {
-      font-size: 30px;
-      margin-bottom: 10px;
-    }
+    grid-template-columns:repeat(4,1fr);
 
-    .skill h3 {
-      margin-bottom: 6px;
-      font-size: 16px;
-    }
+    background:rgba(10,24,54,.97);
 
-    .skill p {
-      color: #abb7da;
-      font-size: 13px;
-    }
+    border:1px solid rgba(131,156,224,.32);
 
-    /* =========================
-       GENERAL SECTIONS
-    ========================== */
+    border-radius:22px;
 
-    section.content-section {
-      max-width: 1180px;
-      margin: auto;
-      padding: 100px 25px;
-    }
+    box-shadow:
+    0 30px 65px rgba(0,0,0,.30);
 
-    .section-label {
-      color: #8b6cff;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      font-size: 13px;
+    overflow:hidden;
+}
 
-      margin-bottom: 8px;
-    }
+.service-item{
 
-    .section-title {
-      font-size: 40px;
-      margin-bottom: 18px;
-    }
+    text-align:center;
 
-    .section-description {
-      color: #aeb9d8;
-      max-width: 760px;
-      font-size: 17px;
-    }
+    padding:27px 20px;
 
-    /* =========================
-       ABOUT
-    ========================== */
+    border-right:1px solid rgba(255,255,255,.10);
+}
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
+.service-item:last-child{
 
-      margin-top: 40px;
-    }
+    border-right:none;
+}
 
-    .about-card {
-      padding: 30px;
+.service-icon{
 
-      background: #101a38;
+    font-size:31px;
 
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 18px;
-    }
+    margin-bottom:10px;
+}
 
-    .about-card h3 {
-      margin-bottom: 14px;
-    }
+.service-item h3{
 
-    .about-card p {
-      color: #aeb9d8;
-    }
+    font-size:15px;
 
-    /* =========================
-       PROJECTS
-    ========================== */
+    margin-bottom:7px;
+}
 
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+.service-item p{
 
-      margin-top: 40px;
-    }
+    font-size:13px;
 
-    .project-card {
-      overflow: hidden;
+    color:#bdc7e4;
 
-      background: #101a38;
+    line-height:1.5;
+}
 
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 20px;
 
-      transition: .25s;
-    }
+/* ================================
+   CONTENT SECTIONS
+================================ */
 
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
+.content-section{
 
-    .project-video {
-      width: 100%;
-      height: 420px;
+    max-width:1180px;
 
-      background: #000;
+    margin:auto;
 
-      object-fit: contain;
+    padding:110px 25px;
+}
 
-      display: block;
-    }
+.section-label{
 
-    .project-info {
-      padding: 24px;
-    }
+    color:#9a65ff;
 
-    .project-info h3 {
-      font-size: 21px;
-      margin-bottom: 9px;
-    }
+    font-size:13px;
 
-    .project-info p {
-      color: #aeb9d8;
-    }
+    font-weight:bold;
 
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
+    letter-spacing:2px;
 
-      margin-top: 16px;
-    }
+    text-transform:uppercase;
 
-    .tag {
-      padding: 6px 10px;
+    margin-bottom:9px;
+}
 
-      background: rgba(115, 75, 255, .15);
+.section-title{
 
-      border: 1px solid rgba(135, 93, 255, .35);
-      border-radius: 30px;
+    font-size:42px;
 
-      color: #c4b9ff;
-      font-size: 12px;
-    }
+    margin-bottom:16px;
+}
 
-    /* =========================
-       CONTACT
-    ========================== */
+.section-description{
 
-    .contact-box {
-      padding: 55px;
+    max-width:750px;
 
-      text-align: center;
+    font-size:17px;
 
-      border-radius: 24px;
+    color:#aebadb;
 
-      background:
-        linear-gradient(
-          135deg,
-          rgba(106, 58, 255, .22),
-          rgba(33, 194, 255, .10)
-        );
+    line-height:1.7;
+}
 
-      border: 1px solid rgba(124, 94, 255, .35);
-    }
 
-    .contact-box h2 {
-      font-size: 40px;
-      margin-bottom: 12px;
-    }
+/* CARDS */
 
-    .contact-box p {
-      color: #b7c2e2;
-      margin-bottom: 25px;
-    }
+.card-grid{
 
-    footer {
-      text-align: center;
-      padding: 30px;
+    margin-top:38px;
 
-      color: #7f8baa;
+    display:grid;
 
-      border-top: 1px solid rgba(255,255,255,.07);
-    }
+    grid-template-columns:1fr 1fr;
 
-    /* =========================
-       MOBILE
-    ========================== */
+    gap:22px;
+}
 
-    @media (max-width: 950px) {
+.card{
 
-      .nav-links {
-        display: none;
-      }
+    padding:28px;
 
-      .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
+    background:#101b3a;
 
-        padding-top: 55px;
-      }
+    border:1px solid rgba(255,255,255,.08);
 
-      .hero-left {
-        margin: auto;
-      }
+    border-radius:18px;
+}
 
-      .hero-description {
-        margin-left: auto;
-        margin-right: auto;
-      }
+.card h3{
 
-      .buttons,
-      .contact-mini {
-        justify-content: center;
-      }
+    margin-bottom:12px;
+}
 
-      .hero-right {
-        min-height: auto;
-      }
+.card p{
 
-      .photo-card {
-        width: min(95%, 520px);
-        height: 570px;
-      }
+    color:#aebadb;
 
-      .signature-card {
-        right: 0;
-      }
+    line-height:1.7;
+}
 
-      .skill-box {
-        grid-template-columns: repeat(2, 1fr);
-      }
 
-      .about-grid,
-      .projects-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+/* ================================
+   PROJECT
+================================ */
 
-    @media (max-width: 600px) {
+.projects-grid{
 
-      nav {
-        padding: 16px 20px;
-      }
+    display:grid;
 
-      .hero {
-        padding: 45px 20px 80px;
-      }
+    grid-template-columns:1fr 1fr;
 
-      .hero h1 {
-        font-size: 47px;
-        letter-spacing: -2px;
-      }
+    gap:28px;
 
-      .hero-description {
-        font-size: 16px;
-      }
+    margin-top:40px;
+}
 
-      .photo-card {
-        width: 100%;
-        height: 480px;
-        border-radius: 25px;
-      }
+.project-card{
 
-      .profile-photo {
-        transform: scale(1.08);
-      }
+    background:#101a38;
 
-      .signature-card {
-        display: none;
-      }
+    border:1px solid rgba(255,255,255,.08);
 
-      .skill-box {
-        grid-template-columns: 1fr;
-      }
+    border-radius:22px;
 
-      .skill {
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,.08);
-      }
+    overflow:hidden;
+}
 
-      .contact-box {
-        padding: 35px 20px;
-      }
+.project-video{
 
-      .contact-box h2 {
-        font-size: 31px;
-      }
-    }
-  </style>
+    width:100%;
+
+    height:430px;
+
+    object-fit:contain;
+
+    background:black;
+}
+
+.project-info{
+
+    padding:25px;
+}
+
+.project-info h3{
+
+    margin-bottom:10px;
+}
+
+.project-info p{
+
+    color:#adb8d7;
+
+    line-height:1.7;
+}
+
+.tags{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+    margin-top:17px;
+}
+
+.tag{
+
+    padding:7px 11px;
+
+    border-radius:30px;
+
+    font-size:12px;
+
+    color:#ccbfff;
+
+    background:rgba(120,75,255,.14);
+
+    border:1px solid rgba(131,86,255,.32);
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-box{
+
+    text-align:center;
+
+    padding:60px 30px;
+
+    border-radius:26px;
+
+    background:
+
+    linear-gradient(
+        135deg,
+        rgba(109,56,255,.22),
+        rgba(42,180,255,.10)
+    );
+
+    border:1px solid rgba(129,96,255,.35);
+}
+
+.contact-box h2{
+
+    font-size:42px;
+
+    margin-bottom:12px;
+}
+
+.contact-box p{
+
+    color:#b9c4df;
+
+    margin-bottom:25px;
+}
+
+
+/* FOOTER */
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#7887aa;
+
+    border-top:1px solid rgba(255,255,255,.07);
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media(max-width:1050px){
+
+.hero{
+
+    grid-template-columns:1fr;
+
+    text-align:center;
+
+    padding-bottom:170px;
+}
+
+.hero-left{
+
+    margin:auto;
+}
+
+.hero-description{
+
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.buttons,
+.contact-mini{
+
+    justify-content:center;
+}
+
+.hero-right{
+
+    margin-top:30px;
+}
+
+.signature{
+
+    right:5%;
+}
+
+.service-panel{
+
+    left:50%;
+
+    right:auto;
+
+    transform:translateX(-50%);
+
+    width:90%;
+}
+
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media(max-width:700px){
+
+nav{
+
+    padding:0 20px;
+}
+
+.nav-links a:not(.nav-hire){
+
+    display:none;
+}
+
+.hero{
+
+    padding:50px 20px 180px;
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    letter-spacing:-2px;
+}
+
+.hero-description{
+
+    font-size:16px;
+}
+
+.hero-right{
+
+    height:520px;
+}
+
+.glow-frame{
+
+    width:320px;
+    height:340px;
+}
+
+.glow-circle{
+
+    width:280px;
+    height:280px;
+}
+
+.profile-photo{
+
+    width:390px;
+}
+
+.signature{
+
+    display:none;
+}
+
+.service-panel{
+
+    grid-template-columns:1fr 1fr;
+
+    bottom:-130px;
+}
+
+.service-item:nth-child(2){
+
+    border-right:none;
+}
+
+.content-section{
+
+    padding-top:150px;
+}
+
+.card-grid,
+.projects-grid{
+
+    grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
-
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- ======================================
+     NAVIGATION
+======================================= -->
 
 <nav>
 
-  <div class="logo">
-    Melbin<span>.</span>
-  </div>
+<div class="logo">
 
-  <div class="nav-links">
-
-    <a href="#about">About</a>
-
-    <a href="#services">Services</a>
-
-    <a href="#tools">Tools</a>
-
-    <a href="#experience">Experience</a>
-
-    <a href="#projects">Projects</a>
-
-    <a href="#contact">Contact</a>
-
-    <a href="#contact" class="nav-hire">
-      Hire Me
-    </a>
-
-  </div>
-
-</nav>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-  <div class="hero-left">
-
-    <div class="availability">
-
-      <span class="status-dot"></span>
-
-      Available for Remote Work • Full-Time or Part-Time
-
-    </div>
-
-
-    <h1>
-
-      Video Editor &
-
-      <br>
-
-      <span class="gradient-text">
-        AI Content Creator
-      </span>
-
-    </h1>
-
-
-    <p class="hero-description">
-
-      I create engaging short-form videos, AI-assisted visuals,
-      social media content, educational materials, and creative
-      digital experiences. I combine storytelling, editing,
-      AI tools, and communication to turn ideas into polished content.
-
-    </p>
-
-
-    <div class="buttons">
-
-      <a href="#projects" class="btn btn-primary">
-        ▶ View My Work
-      </a>
-
-      <!-- Add resume.pdf to your GitHub repository -->
-      <a href="resume.pdf" class="btn" target="_blank">
-        ↓ Download Resume
-      </a>
-
-      <a href="#contact" class="btn">
-        ✉ Hire Me
-      </a>
-
-    </div>
-
-
-    <div class="contact-mini">
-
-      <span>📍 Philippines</span>
-
-      <span>✉ Available by email</span>
-
-      <span>💻 Remote Work</span>
-
-    </div>
-
-  </div>
-
-
-  <!-- LARGE PHOTO -->
-
-  <div class="hero-right">
-
-    <div class="photo-glow"></div>
-
-    <div class="photo-card">
-
-      <!-- Your existing GitHub image -->
-      <img
-        src="profile-photo.png"
-        alt="Melbin A. Andre-E"
-        class="profile-photo"
-      >
-
-    </div>
-
-
-    <div class="signature-card">
-
-      <h3>Melbin A. Andre-E</h3>
-
-      <p>
-        Create • Edit • Innovate
-      </p>
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<div class="skills">
-
-  <div class="skill-box">
-
-    <div class="skill">
-
-      <div class="skill-icon">🎥</div>
-
-      <h3>Video Editing</h3>
-
-      <p>
-        Short-form & social media content
-      </p>
-
-    </div>
-
-
-    <div class="skill">
-
-      <div class="skill-icon">✨</div>
-
-      <h3>AI Content</h3>
-
-      <p>
-        Prompts, visuals & concepts
-      </p>
-
-    </div>
-
-
-    <div class="skill">
-
-      <div class="skill-icon">🎨</div>
-
-      <h3>Canva</h3>
-
-      <p>
-        Graphics & presentations
-      </p>
-
-    </div>
-
-
-    <div class="skill">
-
-      <div class="skill-icon">💻</div>
-
-      <h3>Virtual Assistance</h3>
-
-      <p>
-        Research & administrative support
-      </p>
-
-    </div>
-
-  </div>
+Melbin<span>.</span>
 
 </div>
 
 
-<!-- ABOUT -->
+<div class="nav-links">
 
-<section
-  class="content-section"
-  id="about"
+<a href="#about">About</a>
+
+<a href="#services">Services</a>
+
+<a href="#tools">Tools</a>
+
+<a href="#experience">Experience</a>
+
+<a href="#projects">Projects</a>
+
+<a href="#contact">Contact</a>
+
+<a href="#contact" class="nav-hire">
+
+Hire Me
+
+</a>
+
+</div>
+
+</nav>
+
+
+<!-- ======================================
+     HERO
+======================================= -->
+
+<section class="hero">
+
+
+<!-- LEFT -->
+
+<div class="hero-left">
+
+
+<div class="availability">
+
+<span class="status-dot"></span>
+
+Available for Remote Work • Full-Time or Part-Time
+
+</div>
+
+
+<h1>
+
+Video Editor &
+
+<br>
+
+<span class="gradient-text">
+
+AI Content Creator
+
+</span>
+
+</h1>
+
+
+<p class="hero-description">
+
+I create engaging short-form videos,
+AI-assisted visuals, social media content,
+educational materials, and creative digital experiences.
+
+I combine storytelling, editing,
+AI tools, and communication
+to turn ideas into polished content.
+
+</p>
+
+
+<div class="buttons">
+
+
+<a
+href="#projects"
+class="btn btn-primary"
 >
 
-  <p class="section-label">
-    About Me
-  </p>
+▶ View My Work
 
-  <h2 class="section-title">
-    Creative work powered by technology
-  </h2>
-
-  <p class="section-description">
-
-    I am developing my expertise in video editing,
-    AI-assisted content creation, digital media and
-    virtual assistance. I enjoy transforming ideas
-    into engaging and professional digital content.
-
-  </p>
+</a>
 
 
-  <div class="about-grid">
+<a
+href="resume.pdf"
+class="btn"
+target="_blank"
+>
 
-    <div class="about-card">
+▣ Download Resume
 
-      <h3>Creative Content</h3>
-
-      <p>
-
-        I create short-form video concepts,
-        promotional materials, AI-assisted visuals,
-        presentations and digital content designed
-        for online audiences.
-
-      </p>
-
-    </div>
+</a>
 
 
-    <div class="about-card">
+<a
+href="mailto:melbinandree09@gmail.com"
+class="btn"
+>
 
-      <h3>Administrative Support</h3>
+➤ Hire Me
 
-      <p>
+</a>
 
-        I also bring experience in documentation,
-        communication, records processing,
-        research and organized administrative work.
 
-      </p>
+</div>
 
-    </div>
 
-  </div>
+<div class="contact-mini">
+
+<span>
+⌖ Philippines
+</span>
+
+<span>
+✉ melbinandree09@gmail.com
+</span>
+
+<span>
+☎ +63 910 326 2758
+</span>
+
+</div>
+
+
+</div>
+
+
+<!-- ======================================
+     RIGHT / PHOTO
+======================================= -->
+
+<div class="hero-right">
+
+
+<div class="glow-frame"></div>
+
+
+<div class="glow-circle"></div>
+
+
+<!-- IMPORTANT:
+     profile-photo.png must be transparent
+-->
+
+<img
+src="profile-photo.png"
+alt="Melbin A. Andre-E"
+class="profile-photo"
+>
+
+
+<div class="signature">
+
+<div class="signature-name">
+
+Melbin A. Andre-E
+
+</div>
+
+
+<div class="signature-words">
+
+CREATE
+
+<br>
+
+EDIT
+
+<br>
+
+INNOVATE
+
+<br>
+
+INSPIRE
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- ======================================
+     SERVICE PANEL
+======================================= -->
+
+<div class="service-panel">
+
+
+<div class="service-item">
+
+<div class="service-icon">
+🎥
+</div>
+
+<h3>
+Video Editing
+</h3>
+
+<p>
+Short-form & social media
+</p>
+
+</div>
+
+
+<div class="service-item">
+
+<div class="service-icon">
+✨
+</div>
+
+<h3>
+AI Content
+</h3>
+
+<p>
+Prompts, visuals & concepts
+</p>
+
+</div>
+
+
+<div class="service-item">
+
+<div class="service-icon">
+🎨
+</div>
+
+<h3>
+Canva
+</h3>
+
+<p>
+Graphics & presentations
+</p>
+
+</div>
+
+
+<div class="service-item">
+
+<div class="service-icon">
+🎧
+</div>
+
+<h3>
+Virtual Assistance
+</h3>
+
+<p>
+Research & admin support
+</p>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- SERVICES -->
+<!-- ======================================
+     ABOUT
+======================================= -->
 
 <section
-  class="content-section"
-  id="services"
+class="content-section"
+id="about"
 >
 
-  <p class="section-label">
-    Services
-  </p>
+<div class="section-label">
+About Me
+</div>
 
-  <h2 class="section-title">
-    What I Can Help You With
-  </h2>
+<h2 class="section-title">
 
+Creative Content Powered by Technology
 
-  <div class="about-grid">
-
-    <div class="about-card">
-
-      <h3>🎬 Video Editing</h3>
-
-      <p>
-        Short-form advertisements, promotional videos,
-        social media videos and basic commercial editing.
-      </p>
-
-    </div>
+</h2>
 
 
-    <div class="about-card">
+<p class="section-description">
 
-      <h3>✨ AI Content Creation</h3>
+Creative and adaptable Video Editor and
+AI Content Creator with experience creating
+educational, social media, and digital content.
 
-      <p>
-        AI advertising concepts, image prompts,
-        video prompts, visual storytelling and
-        creative content development.
-      </p>
+I enjoy combining storytelling,
+visual creativity, AI tools,
+and editing to produce engaging content.
 
-    </div>
-
-
-    <div class="about-card">
-
-      <h3>🎨 Canva Design</h3>
-
-      <p>
-        Social media graphics, presentations,
-        promotional materials and simple digital designs.
-      </p>
-
-    </div>
+</p>
 
 
-    <div class="about-card">
+<div class="card-grid">
 
-      <h3>💻 Virtual Assistance</h3>
 
-      <p>
-        Research, documentation, administrative support,
-        organization and written communication.
-      </p>
+<div class="card">
 
-    </div>
+<h3>
+Creative Content
+</h3>
 
-  </div>
+<p>
+
+I develop video concepts,
+scripts, AI prompts,
+storyboards, social media content,
+educational visuals and short-form videos.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Reliable & Adaptable
+</h3>
+
+<p>
+
+I am detail-oriented,
+comfortable working independently,
+open to international clients,
+and willing to learn new technology.
+
+</p>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
-<!-- TOOLS -->
+<!-- ======================================
+     SERVICES
+======================================= -->
 
 <section
-  class="content-section"
-  id="tools"
+class="content-section"
+id="services"
 >
 
-  <p class="section-label">
-    Tools
-  </p>
-
-  <h2 class="section-title">
-    Tools I Work With
-  </h2>
+<div class="section-label">
+Services
+</div>
 
 
-  <div class="tags">
+<h2 class="section-title">
 
-    <span class="tag">ChatGPT</span>
+What I Can Help You With
 
-    <span class="tag">Google Flow</span>
+</h2>
 
-    <span class="tag">CapCut</span>
 
-    <span class="tag">Canva</span>
+<div class="card-grid">
 
-    <span class="tag">Google Workspace</span>
 
-    <span class="tag">AI Image Generation</span>
+<div class="card">
 
-    <span class="tag">AI Video Generation</span>
+<h3>
+🎬 Video Editing
+</h3>
 
-    <span class="tag">Microsoft Office</span>
+<p>
 
-  </div>
+Short-form videos,
+social media videos,
+promotional advertisements,
+reels, captions,
+transitions and effects.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+✨ AI Content Creation
+</h3>
+
+<p>
+
+AI-generated video concepts,
+image prompts,
+video prompts,
+scripts,
+storyboards and creative visual development.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+🎨 Canva Design
+</h3>
+
+<p>
+
+Presentations,
+social graphics,
+posters,
+thumbnails and promotional materials.
+
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+💻 Virtual Assistance
+</h3>
+
+<p>
+
+Online research,
+data entry,
+document preparation,
+file organization and administrative support.
+
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- ======================================
+     TOOLS
+======================================= -->
 
 <section
-  class="content-section"
-  id="experience"
+class="content-section"
+id="tools"
 >
 
-  <p class="section-label">
-    Experience
-  </p>
-
-  <h2 class="section-title">
-    Professional Strengths
-  </h2>
+<div class="section-label">
+Tools
+</div>
 
 
-  <div class="about-grid">
+<h2 class="section-title">
 
-    <div class="about-card">
+Tools I Work With
 
-      <h3>Administrative & Documentation Work</h3>
-
-      <p>
-
-        Experienced in document evaluation,
-        records processing, client communication,
-        data verification, documentation and
-        organized administrative workflows.
-
-      </p>
-
-    </div>
+</h2>
 
 
-    <div class="about-card">
+<div class="tags">
 
-      <h3>Digital Content Creation</h3>
+<span class="tag">CapCut</span>
 
-      <p>
+<span class="tag">Canva</span>
 
-        Developing promotional video concepts,
-        AI-assisted advertisements, social media
-        visuals and creative short-form content.
+<span class="tag">ChatGPT</span>
 
-      </p>
+<span class="tag">Google Flow</span>
 
-    </div>
+<span class="tag">AI Video Generation</span>
 
-  </div>
+<span class="tag">AI Image Generation</span>
+
+<span class="tag">Prompt Writing</span>
+
+<span class="tag">Storyboarding</span>
+
+<span class="tag">Microsoft Office</span>
+
+<span class="tag">Google Workspace</span>
+
+</div>
+
 
 </section>
 
 
-<!-- PROJECTS -->
+<!-- ======================================
+     EXPERIENCE
+======================================= -->
 
 <section
-  class="content-section"
-  id="projects"
+class="content-section"
+id="experience"
 >
 
-  <p class="section-label">
-    Portfolio
-  </p>
-
-  <h2 class="section-title">
-    Featured Projects
-  </h2>
-
-  <p class="section-description">
-
-    A selection of my video editing and
-    AI-assisted creative projects.
-
-  </p>
+<div class="section-label">
+Experience
+</div>
 
 
-  <div class="projects-grid">
+<h2 class="section-title">
 
-    <article class="project-card">
+Creative & Professional Experience
 
-      <!-- Your existing uploaded MP4 -->
-      <video
-        class="project-video"
-        controls
-        preload="metadata"
-      >
-
-        <source
-          src="project placeholder.mp4"
-          type="video/mp4"
-        >
-
-        Your browser does not support video playback.
-
-      </video>
+</h2>
 
 
-      <div class="project-info">
-
-        <h3>
-          AI Short-Form Advertisement
-        </h3>
-
-        <p>
-
-          Short-form promotional content combining
-          AI-assisted concept development,
-          visual generation and video editing.
-
-        </p>
+<div class="card-grid">
 
 
-        <div class="tags">
+<div class="card">
 
-          <span class="tag">
-            AI Content
-          </span>
+<h3>
 
-          <span class="tag">
-            Video Editing
-          </span>
+AI Content Creation & Video Editing
 
-          <span class="tag">
-            Prompt Engineering
-          </span>
+</h3>
 
-        </div>
+<p>
 
-      </div>
+Creating AI-assisted video concepts,
+scripts, prompts,
+storyboards, generated visuals,
+short-form video projects
+and edited digital content.
 
-    </article>
+</p>
 
-
-    <article class="project-card">
-
-      <div
-        style="
-          min-height:420px;
-          display:flex;
-          justify-content:center;
-          align-items:center;
-          text-align:center;
-          background:
-          linear-gradient(
-          135deg,
-          #161d42,
-          #10182f
-          );
-          color:#8895ba;
-          padding:30px;
-        "
-      >
-
-        Your next project will appear here.
-
-      </div>
+</div>
 
 
-      <div class="project-info">
+<div class="card">
 
-        <h3>
-          More Projects Coming Soon
-        </h3>
+<h3>
 
-        <p>
+Educational & Digital Content
 
-          I am continuously building new
-          AI-assisted advertisements,
-          videos and creative projects.
+</h3>
 
-        </p>
+<p>
 
-      </div>
+Experience creating presentations,
+visual materials,
+educational resources,
+worksheets and digital instructional content.
 
-    </article>
+</p>
 
-  </div>
+</div>
+
+
+</div>
 
 </section>
 
 
-<!-- CONTACT -->
+<!-- ======================================
+     PROJECTS
+======================================= -->
 
 <section
-  class="content-section"
-  id="contact"
+class="content-section"
+id="projects"
 >
 
-  <div class="contact-box">
+<div class="section-label">
 
-    <p class="section-label">
-      Let's Work Together
-    </p>
+Portfolio
 
-    <h2>
-      Have a project in mind?
-    </h2>
-
-    <p>
-
-      I'm available for remote opportunities,
-      freelance projects, full-time and
-      part-time work.
-
-    </p>
+</div>
 
 
-    <!-- Replace YOUR-EMAIL with your email -->
-    <a
-      href="mailto:YOUR-EMAIL@gmail.com"
-      class="btn btn-primary"
-    >
+<h2 class="section-title">
 
-      ✉ Contact Me
+Featured Projects
 
-    </a>
+</h2>
 
-  </div>
+
+<p class="section-description">
+
+A selection of my AI-assisted
+content creation and video editing work.
+
+</p>
+
+
+<div class="projects-grid">
+
+
+<div class="project-card">
+
+
+<video
+class="project-video"
+controls
+preload="metadata"
+>
+
+<source
+src="project placeholder.mp4"
+type="video/mp4"
+>
+
+Your browser does not support video.
+
+</video>
+
+
+<div class="project-info">
+
+
+<h3>
+
+AI Short-Form Video Project
+
+</h3>
+
+
+<p>
+
+A creative video project
+combining AI-assisted concept development,
+visual storytelling,
+prompt development
+and video editing.
+
+</p>
+
+
+<div class="tags">
+
+<span class="tag">
+AI Content
+</span>
+
+<span class="tag">
+Video Editing
+</span>
+
+<span class="tag">
+Prompt Engineering
+</span>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+<div class="project-card">
+
+
+<div
+style="
+height:430px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:30px;
+background:
+linear-gradient(
+135deg,
+#151e45,
+#091429
+);
+color:#91a0c8;
+"
+>
+
+More Projects Coming Soon
+
+</div>
+
+
+<div class="project-info">
+
+<h3>
+
+Next Creative Project
+
+</h3>
+
+<p>
+
+More AI advertisements,
+video editing projects,
+and digital content will be added here.
+
+</p>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+<!-- ======================================
+     CONTACT
+======================================= -->
+
+<section
+class="content-section"
+id="contact"
+>
+
+<div class="contact-box">
+
+
+<div class="section-label">
+
+Let's Work Together
+
+</div>
+
+
+<h2>
+
+Have a Project in Mind?
+
+</h2>
+
+
+<p>
+
+I'm available for remote work,
+freelance projects,
+full-time opportunities
+and part-time opportunities.
+
+</p>
+
+
+<a
+href="mailto:melbinandree09@gmail.com"
+class="btn btn-primary"
+>
+
+✉ Contact Me
+
+</a>
+
+
+</div>
 
 </section>
 
 
 <footer>
 
-  © 2026 Melbin A. Andre-E • Video Editor & AI Content Creator
+© 2026 Melbin A. Andre-E
+• Video Editor & AI Content Creator
 
 </footer>
 
 
 </body>
+
 </html>
