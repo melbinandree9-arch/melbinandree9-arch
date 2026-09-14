@@ -20,7 +20,7 @@ html{
 
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#071126;
+    background:#071127;
     color:white;
     overflow-x:hidden;
 }
@@ -30,23 +30,25 @@ a{
     color:inherit;
 }
 
-/* NAVIGATION */
+/* ==========================
+   NAVIGATION
+========================== */
 
 nav{
-    height:74px;
+    height:76px;
     padding:0 6%;
 
     display:flex;
     align-items:center;
     justify-content:space-between;
 
+    background:#071127;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
     position:sticky;
     top:0;
     z-index:1000;
-
-    background:rgba(5,14,34,.96);
-
-    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
@@ -55,17 +57,17 @@ nav{
 }
 
 .logo span{
-    color:#38d7ff;
+    color:#35d9ff;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:32px;
+    gap:30px;
 }
 
 .nav-links a{
-    color:#c9d3eb;
+    color:#c8d0e6;
     font-size:15px;
 }
 
@@ -73,115 +75,115 @@ nav{
     color:white;
 }
 
-.nav-hire{
-    padding:12px 28px;
-
-    border-radius:30px;
-
+.nav-button{
     background:linear-gradient(
         135deg,
-        #7138ff,
-        #a32eff
+        #713cff,
+        #a32dff
     );
+
+    padding:12px 27px;
+
+    border-radius:28px;
 
     color:white !important;
 
     font-weight:700;
 }
 
-/* HERO */
+
+/* ==========================
+   HERO
+========================== */
 
 .hero{
-    min-height:790px;
-
-    position:relative;
+    min-height:760px;
 
     display:grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:1.05fr .95fr;
 
     align-items:center;
 
-    gap:30px;
+    gap:55px;
 
-    padding:70px 6% 120px;
+    padding:70px 6% 80px;
 
     background:
 
     radial-gradient(
-        circle at 18% 42%,
-        rgba(111,54,255,.30),
-        transparent 34%
+        circle at 17% 42%,
+        rgba(97,43,255,.27),
+        transparent 36%
     ),
 
     radial-gradient(
-        circle at 72% 36%,
-        rgba(0,130,255,.18),
-        transparent 31%
+        circle at 78% 40%,
+        rgba(25,143,255,.16),
+        transparent 35%
     ),
 
     linear-gradient(
         120deg,
-        #14143d 0%,
-        #08142c 55%,
-        #061023 100%
+        #16133d,
+        #071127 56%,
+        #061124
     );
 }
 
-/* LEFT SIDE */
+
+/* LEFT */
 
 .hero-left{
-    position:relative;
-    z-index:5;
     max-width:720px;
 }
 
-.availability{
+.available{
     display:inline-flex;
 
     align-items:center;
 
     gap:10px;
 
-    padding:10px 18px;
+    padding:9px 16px;
 
-    border:1px solid #7367ff;
+    margin-bottom:30px;
 
-    border-radius:40px;
+    border:1px solid #7164ff;
 
-    margin-bottom:34px;
+    border-radius:30px;
 
-    color:#e6eaff;
+    color:#e2e7fa;
 
     font-size:14px;
 }
 
-.dot{
-    width:11px;
-    height:11px;
+.green-dot{
+    width:10px;
+    height:10px;
 
     border-radius:50%;
 
     background:#20e5ad;
 
-    box-shadow:0 0 14px #20e5ad;
+    box-shadow:0 0 12px #20e5ad;
 }
 
 .hero h1{
-    font-size:clamp(56px,5.3vw,88px);
+    font-size:clamp(54px,5.2vw,82px);
 
-    line-height:1.02;
+    line-height:1;
 
     letter-spacing:-3px;
 
     margin-bottom:26px;
 }
 
-.gradient{
+.gradient-text{
     background:linear-gradient(
         90deg,
-        #ac67ff,
-        #7f84ff,
-        #3ed4ff
+        #a568ff,
+        #718dff,
+        #39d6ff
     );
 
     -webkit-background-clip:text;
@@ -190,17 +192,18 @@ nav{
     color:transparent;
 }
 
-.hero-desc{
-    max-width:670px;
+.hero-description{
+    color:#c5cde2;
 
     font-size:18px;
 
-    line-height:1.8;
+    line-height:1.75;
 
-    color:#c3cdeb;
+    max-width:680px;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
+
 
 /* BUTTONS */
 
@@ -211,23 +214,21 @@ nav{
 
     gap:12px;
 
-    margin-bottom:30px;
+    margin-bottom:28px;
 }
 
 .btn{
+    padding:14px 22px;
+
     display:inline-flex;
 
     align-items:center;
 
     justify-content:center;
 
-    padding:14px 23px;
+    border:1px solid #536080;
 
     border-radius:9px;
-
-    border:1px solid #6558a8;
-
-    color:white;
 
     font-weight:700;
 
@@ -238,240 +239,247 @@ nav{
     transform:translateY(-3px);
 }
 
-.primary{
+.btn-primary{
     border:none;
 
     background:linear-gradient(
         135deg,
-        #7135ff,
-        #9b31ff
+        #713cff,
+        #9b30ff
     );
 }
 
-/* CONTACT ROW */
+
+/* DETAILS */
 
 .contact-row{
     display:flex;
 
     flex-wrap:wrap;
 
-    gap:28px;
+    gap:22px;
 
-    color:#bdc7e2;
+    color:#b5bfdc;
 
     font-size:14px;
 }
 
-/* RIGHT SIDE */
+
+/* ==========================
+   PHOTO AREA
+========================== */
 
 .hero-right{
-    position:relative;
+    min-height:590px;
 
-    height:650px;
+    position:relative;
 
     display:flex;
 
     justify-content:center;
 
-    align-items:flex-end;
+    align-items:center;
 }
 
-/* PURPLE FRAME */
 
-.frame{
-    position:absolute;
+/* MAIN FRAME */
 
-    width:480px;
-    height:470px;
+.photo-frame{
+    width:500px;
+    height:540px;
 
-    bottom:52px;
+    position:relative;
 
-    border-radius:32px;
+    border-radius:38px;
 
-    border:2px solid #744dff;
+    border:2px solid rgba(118,83,255,.9);
+
+    overflow:hidden;
 
     background:
 
     radial-gradient(
-        circle at center,
-        rgba(27,152,255,.82) 0%,
-        rgba(57,79,230,.63) 36%,
-        rgba(70,35,160,.34) 60%,
-        rgba(14,22,55,.14) 76%
+        circle at 50% 45%,
+        #167cff 0%,
+        #394fe4 32%,
+        #29245d 58%,
+        #111934 77%
     );
 
     box-shadow:
-        0 0 80px rgba(60,72,255,.30);
+
+        0 0 70px rgba(72,78,255,.26),
+
+        inset 0 0 50px rgba(59,87,255,.18);
 }
+
 
 /* BLUE CIRCLE */
 
-.circle{
+.photo-frame::before{
+    content:"";
+
     position:absolute;
 
     width:390px;
     height:390px;
 
-    bottom:88px;
-
     border-radius:50%;
 
-    background:
+    left:50%;
+    top:50%;
 
-    radial-gradient(
-        circle,
-        #187eff 0%,
-        #4356e8 46%,
-        rgba(61,55,184,.18) 70%
+    transform:translate(-50%,-48%);
+
+    background:linear-gradient(
+        135deg,
+        #177bff,
+        #5a43ef
     );
 
-    opacity:.82;
+    opacity:.55;
 }
 
-/* TRANSPARENT PHOTO */
+
+/* YOUR PHOTO */
 
 .profile-photo{
     position:absolute;
 
-    z-index:5;
+    z-index:3;
 
-    bottom:0;
+    width:108%;
 
-    width:565px;
+    height:108%;
 
-    max-height:665px;
+    left:50%;
+    bottom:-4%;
+
+    transform:translateX(-50%);
 
     object-fit:contain;
 
     object-position:center bottom;
-
-    background:transparent;
-
-    filter:
-        drop-shadow(
-            0 22px 28px
-            rgba(0,0,0,.34)
-        );
 }
 
-/* SIGNATURE */
 
-.signature{
+/* NAME LABEL */
+
+.name-card{
     position:absolute;
 
-    z-index:7;
+    z-index:6;
 
-    right:-62px;
+    bottom:36px;
+    right:-30px;
 
-    bottom:240px;
+    min-width:245px;
 
-    transform:rotate(-5deg);
+    padding:17px 20px;
+
+    border-radius:15px;
+
+    border:1px solid rgba(94,134,236,.35);
+
+    background:rgba(8,20,48,.92);
+
+    box-shadow:0 12px 35px rgba(0,0,0,.28);
 }
 
-.signature-name{
-    font-family:cursive;
+.name-card h3{
+    color:#4bd5ff;
 
-    color:#4bd7ff;
+    font-size:19px;
 
-    font-size:28px;
-
-    padding-bottom:4px;
-
-    border-bottom:3px solid #72ceff;
-
-    text-shadow:
-        0 0 14px
-        rgba(69,213,255,.45);
+    margin-bottom:4px;
 }
 
-.signature-words{
-    margin:18px 0 0 45px;
+.name-card p{
+    color:#98a6cc;
 
-    color:#bbc8e7;
+    font-size:10px;
 
-    font-size:11px;
-
-    letter-spacing:5px;
-
-    line-height:1.9;
+    letter-spacing:3px;
 }
 
-/* SERVICE PANEL */
 
-.service-panel{
-    position:absolute;
+/* ==========================
+   SKILLS
+========================== */
+
+.skills-wrap{
+    width:min(1120px,90%);
+
+    margin:-42px auto 0;
+
+    position:relative;
 
     z-index:20;
+}
 
-    right:5%;
-
-    bottom:-52px;
-
-    width:680px;
-
+.skills{
     display:grid;
 
     grid-template-columns:repeat(4,1fr);
 
-    background:rgba(10,24,54,.98);
+    background:#101c3d;
 
-    border:1px solid rgba(131,156,224,.32);
+    border:1px solid rgba(134,157,219,.25);
 
     border-radius:22px;
 
     overflow:hidden;
 
-    box-shadow:
-        0 28px 65px
-        rgba(0,0,0,.28);
+    box-shadow:0 25px 60px rgba(0,0,0,.27);
 }
 
-.service-item{
-    padding:27px 18px;
+.skill{
+    padding:26px 18px;
 
     text-align:center;
 
-    border-right:
-        1px solid
-        rgba(255,255,255,.09);
+    border-right:1px solid rgba(255,255,255,.08);
 }
 
-.service-item:last-child{
+.skill:last-child{
     border-right:none;
 }
 
-.service-icon{
-    font-size:31px;
+.skill-icon{
+    font-size:29px;
 
-    margin-bottom:10px;
+    margin-bottom:8px;
 }
 
-.service-item h3{
+.skill h3{
     font-size:15px;
 
-    margin-bottom:7px;
+    margin-bottom:5px;
 }
 
-.service-item p{
+.skill p{
+    color:#adb8d7;
+
     font-size:13px;
-
-    color:#bdc7e4;
-
-    line-height:1.5;
 }
 
-/* GENERAL SECTIONS */
+
+/* ==========================
+   SECTIONS
+========================== */
 
 .section{
-    max-width:1180px;
+    width:min(1120px,90%);
 
     margin:auto;
 
-    padding:110px 25px;
+    padding:95px 0;
 }
 
 .section-label{
-    color:#9a65ff;
+    color:#9568ff;
+
+    text-transform:uppercase;
 
     font-size:13px;
 
@@ -479,46 +487,44 @@ nav{
 
     letter-spacing:2px;
 
-    text-transform:uppercase;
-
     margin-bottom:8px;
 }
 
-.section h2{
-    font-size:42px;
+.section-title{
+    font-size:40px;
 
-    margin-bottom:16px;
+    margin-bottom:15px;
 }
 
-.section-intro{
-    color:#aebadb;
-
-    max-width:760px;
+.section-text{
+    color:#adb8d7;
 
     line-height:1.7;
+
+    max-width:760px;
 }
 
-.cards{
-    margin-top:38px;
+
+/* CARDS */
+
+.card-grid{
+    margin-top:35px;
 
     display:grid;
 
-    grid-template-columns:
-        repeat(2,1fr);
+    grid-template-columns:repeat(2,1fr);
 
-    gap:22px;
+    gap:20px;
 }
 
 .card{
-    padding:28px;
-
-    background:#101b3a;
-
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    padding:27px;
 
     border-radius:18px;
+
+    background:#101b39;
+
+    border:1px solid rgba(255,255,255,.08);
 }
 
 .card h3{
@@ -526,33 +532,32 @@ nav{
 }
 
 .card p{
-    color:#aebadb;
+    color:#aeb8d6;
 
     line-height:1.7;
 }
 
+
 /* PROJECT */
 
-.project{
-    margin-top:38px;
+.project-card{
+    margin-top:35px;
 
     overflow:hidden;
 
     border-radius:22px;
 
-    background:#101a38;
+    background:#101b39;
 
-    border:
-        1px solid
-        rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.08);
 }
 
-.project video{
-    display:block;
-
+.project-card video{
     width:100%;
 
-    max-height:560px;
+    max-height:550px;
+
+    display:block;
 
     object-fit:contain;
 
@@ -564,70 +569,67 @@ nav{
 }
 
 .project-info p{
-    color:#adb8d7;
+    color:#aeb8d6;
 
     margin-top:8px;
 
     line-height:1.7;
 }
 
+
 /* CONTACT */
 
 .contact-box{
-    text-align:center;
+    padding:55px 25px;
 
-    padding:58px 30px;
+    text-align:center;
 
     border-radius:26px;
 
-    background:
-
-    linear-gradient(
+    background:linear-gradient(
         135deg,
         rgba(109,56,255,.22),
-        rgba(42,180,255,.10)
+        rgba(43,180,255,.10)
     );
 
-    border:
-        1px solid
-        rgba(129,96,255,.35);
+    border:1px solid rgba(121,88,255,.35);
 }
 
 .contact-box p{
-    color:#b9c4df;
+    color:#b8c2df;
 
     margin:12px 0 24px;
 }
+
 
 footer{
     text-align:center;
 
     padding:30px;
 
-    color:#7887aa;
+    color:#7d89a8;
 
-    border-top:
-        1px solid
-        rgba(255,255,255,.07);
+    border-top:1px solid rgba(255,255,255,.07);
 }
 
-/* TABLET */
 
-@media(max-width:1050px){
+/* ==========================
+   TABLET
+========================== */
+
+@media(max-width:950px){
 
     .hero{
         grid-template-columns:1fr;
 
         text-align:center;
-
-        padding-bottom:175px;
     }
 
     .hero-left{
         margin:auto;
     }
 
-    .hero-desc{
+    .hero-description{
         margin-left:auto;
         margin-right:auto;
     }
@@ -638,89 +640,82 @@ footer{
     }
 
     .hero-right{
-        margin-top:25px;
+        min-height:600px;
     }
 
-    .signature{
-        right:4%;
+    .name-card{
+        right:0;
     }
 
-    .service-panel{
-        left:50%;
+    .skills{
+        grid-template-columns:repeat(2,1fr);
+    }
 
-        right:auto;
-
-        transform:
-            translateX(-50%);
-
-        width:90%;
+    .card-grid{
+        grid-template-columns:1fr;
     }
 }
 
-/* MOBILE */
 
-@media(max-width:700px){
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:600px){
 
     nav{
         padding:0 20px;
     }
 
-    .nav-links a:not(.nav-hire){
+    .nav-links a:not(.nav-button){
         display:none;
     }
 
     .hero{
-        padding:
-            48px 20px 190px;
+        padding:50px 20px 70px;
     }
 
     .hero h1{
-        font-size:48px;
+        font-size:47px;
 
         letter-spacing:-2px;
     }
 
-    .hero-desc{
+    .hero-description{
         font-size:16px;
     }
 
-    .hero-right{
-        height:520px;
-    }
+    .photo-frame{
+        width:340px;
 
-    .frame{
-        width:320px;
-
-        height:340px;
-    }
-
-    .circle{
-        width:280px;
-
-        height:280px;
+        height:420px;
     }
 
     .profile-photo{
-        width:390px;
+        width:115%;
+        height:115%;
     }
 
-    .signature{
-        display:none;
+    .name-card{
+        bottom:18px;
+
+        right:10px;
+
+        min-width:200px;
     }
 
-    .service-panel{
-        grid-template-columns:
-            1fr 1fr;
-
-        bottom:-132px;
-    }
-
-    .section{
-        padding-top:155px;
-    }
-
-    .cards{
+    .skills{
         grid-template-columns:1fr;
+    }
+
+    .skill{
+        border-right:none;
+
+        border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .section-title{
+        font-size:32px;
     }
 }
 
@@ -728,15 +723,20 @@ footer{
 
 </head>
 
+
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- NAV -->
 
 <nav>
 
 <div class="logo">
+
 Melbin<span>.</span>
+
 </div>
+
 
 <div class="nav-links">
 
@@ -766,7 +766,7 @@ Contact
 
 <a
 href="#contact"
-class="nav-hire"
+class="nav-button"
 >
 Hire Me
 </a>
@@ -784,9 +784,9 @@ Hire Me
 <div class="hero-left">
 
 
-<div class="availability">
+<div class="available">
 
-<span class="dot"></span>
+<span class="green-dot"></span>
 
 Available for Remote Work • Full-Time or Part-Time
 
@@ -799,7 +799,7 @@ Video Editor &
 
 <br>
 
-<span class="gradient">
+<span class="gradient-text">
 
 AI Content Creator
 
@@ -808,7 +808,7 @@ AI Content Creator
 </h1>
 
 
-<p class="hero-desc">
+<p class="hero-description">
 
 I create engaging short-form videos,
 AI-assisted visuals,
@@ -827,10 +827,9 @@ to turn ideas into polished content.
 
 <div class="buttons">
 
-
 <a
 href="#projects"
-class="btn primary"
+class="btn btn-primary"
 >
 
 ▶ View My Work
@@ -839,7 +838,7 @@ class="btn primary"
 
 
 <a
-href="#contact"
+href="mailto:melbinandree09@gmail.com"
 class="btn"
 >
 
@@ -847,14 +846,13 @@ class="btn"
 
 </a>
 
-
 </div>
 
 
 <div class="contact-row">
 
 <span>
-⌖ Philippines
+📍 Philippines
 </span>
 
 <span>
@@ -871,18 +869,13 @@ class="btn"
 </div>
 
 
-<!-- RIGHT SIDE -->
+<!-- PHOTO -->
 
 <div class="hero-right">
 
 
-<div class="frame"></div>
+<div class="photo-frame">
 
-
-<div class="circle"></div>
-
-
-<!-- THIS IMAGE MUST BE TRANSPARENT -->
 
 <img
 src="profile-photo.png"
@@ -891,31 +884,18 @@ class="profile-photo"
 >
 
 
-<div class="signature">
+</div>
 
 
-<div class="signature-name">
+<div class="name-card">
 
+<h3>
 Melbin A. Andre-E
+</h3>
 
-</div>
-
-
-<div class="signature-words">
-
-CREATE
-
-<br>
-
-EDIT
-
-<br>
-
-INNOVATE
-
-<br>
-
-INSPIRE
+<p>
+CREATE • EDIT • INNOVATE
+</p>
 
 </div>
 
@@ -923,17 +903,19 @@ INSPIRE
 </div>
 
 
-</div>
+</section>
 
 
 <!-- SKILLS -->
 
-<div class="service-panel">
+<div class="skills-wrap">
+
+<div class="skills">
 
 
-<div class="service-item">
+<div class="skill">
 
-<div class="service-icon">
+<div class="skill-icon">
 🎥
 </div>
 
@@ -948,9 +930,9 @@ Short-form & social media
 </div>
 
 
-<div class="service-item">
+<div class="skill">
 
-<div class="service-icon">
+<div class="skill-icon">
 ✨
 </div>
 
@@ -965,9 +947,9 @@ Prompts, visuals & concepts
 </div>
 
 
-<div class="service-item">
+<div class="skill">
 
-<div class="service-icon">
+<div class="skill-icon">
 🎨
 </div>
 
@@ -982,10 +964,10 @@ Graphics & presentations
 </div>
 
 
-<div class="service-item">
+<div class="skill">
 
-<div class="service-icon">
-🎧
+<div class="skill-icon">
+💻
 </div>
 
 <h3>
@@ -1001,8 +983,7 @@ Research & admin support
 
 </div>
 
-
-</section>
+</div>
 
 
 <!-- ABOUT -->
@@ -1016,24 +997,24 @@ id="about"
 About Me
 </div>
 
-<h2>
+<h2 class="section-title">
+
 Creative Content Powered by Technology
+
 </h2>
 
-
-<p class="section-intro">
+<p class="section-text">
 
 Creative and adaptable Video Editor
-and AI Content Creator
-with experience creating
-educational,
+and AI Content Creator with experience
+creating educational,
 social media,
 and digital content.
 
 </p>
 
 
-<div class="cards">
+<div class="card-grid">
 
 
 <div class="card">
@@ -1044,12 +1025,11 @@ Creative Content
 
 <p>
 
-I develop video concepts,
+I create video concepts,
 scripts,
 AI prompts,
 storyboards,
 social media content,
-educational visuals,
 and short-form videos.
 
 </p>
@@ -1067,8 +1047,9 @@ Reliable & Adaptable
 
 I am detail-oriented,
 comfortable working independently,
-open to international clients,
-and willing to learn new technology.
+and willing to learn new platforms,
+tools,
+and workflows.
 
 </p>
 
@@ -1076,7 +1057,6 @@ and willing to learn new technology.
 
 
 </div>
-
 
 </section>
 
@@ -1092,12 +1072,12 @@ id="services"
 Services
 </div>
 
-<h2>
+<h2 class="section-title">
 What I Can Help You With
 </h2>
 
 
-<div class="cards">
+<div class="card-grid">
 
 
 <div class="card">
@@ -1109,10 +1089,11 @@ What I Can Help You With
 <p>
 
 Short-form videos,
+promotional videos,
 social media videos,
-promotional content,
 captions,
 transitions,
+music,
 and effects.
 
 </p>
@@ -1128,12 +1109,12 @@ and effects.
 
 <p>
 
-AI video concepts,
-image prompts,
-video prompts,
+AI video generation,
+AI images,
+prompt writing,
 scripts,
 storyboards,
-and creative development.
+and visual concepts.
 
 </p>
 
@@ -1149,8 +1130,8 @@ and creative development.
 <p>
 
 Presentations,
-social graphics,
 posters,
+social graphics,
 thumbnails,
 and promotional materials.
 
@@ -1162,7 +1143,7 @@ and promotional materials.
 <div class="card">
 
 <h3>
-💻 Virtual Assistance
+💻 Virtual Assistant Support
 </h3>
 
 <p>
@@ -1180,7 +1161,6 @@ and administrative support.
 
 </div>
 
-
 </section>
 
 
@@ -1195,19 +1175,17 @@ id="tools"
 Tools
 </div>
 
-<h2>
+<h2 class="section-title">
 Tools I Work With
 </h2>
 
-
-<p class="section-intro">
+<p class="section-text">
 
 CapCut • Canva • ChatGPT • Google Flow •
 AI Video Generation • AI Image Generation •
 Microsoft Office • Google Workspace
 
 </p>
-
 
 </section>
 
@@ -1223,12 +1201,12 @@ id="experience"
 Experience
 </div>
 
-<h2>
+<h2 class="section-title">
 Creative & Professional Experience
 </h2>
 
 
-<div class="cards">
+<div class="card-grid">
 
 
 <div class="card">
@@ -1244,7 +1222,7 @@ scripts,
 prompts,
 storyboards,
 generated visuals,
-and short-form video projects.
+and short-form video content.
 
 </p>
 
@@ -1254,16 +1232,15 @@ and short-form video projects.
 <div class="card">
 
 <h3>
-Educational & Digital Content
+Educational Content
 </h3>
 
 <p>
 
-Experience creating presentations,
-visual materials,
-educational resources,
+Creating presentations,
 worksheets,
-and digital instructional content.
+visual materials,
+and digital instructional resources.
 
 </p>
 
@@ -1271,7 +1248,6 @@ and digital instructional content.
 
 
 </div>
-
 
 </section>
 
@@ -1287,12 +1263,12 @@ id="projects"
 Portfolio
 </div>
 
-<h2>
+<h2 class="section-title">
 Featured Project
 </h2>
 
 
-<div class="project">
+<div class="project-card">
 
 
 <video
@@ -1305,35 +1281,28 @@ src="project placeholder.mp4"
 type="video/mp4"
 >
 
-Your browser does not support video playback.
-
 </video>
 
 
 <div class="project-info">
 
-
 <h3>
 AI Short-Form Video Project
 </h3>
 
-
 <p>
 
-A creative project combining
 AI-assisted concept development,
-visual storytelling,
 prompt creation,
+visual storytelling,
 and video editing.
 
 </p>
 
-
 </div>
 
 
 </div>
-
 
 </section>
 
@@ -1347,25 +1316,20 @@ id="contact"
 
 <div class="contact-box">
 
-
 <div class="section-label">
-
 Let's Work Together
-
 </div>
 
-
-<h2>
+<h2 class="section-title">
 
 Have a Project in Mind?
 
 </h2>
 
-
 <p>
 
-I'm available for remote work,
-freelance projects,
+I'm available for remote,
+freelance,
 full-time,
 and part-time opportunities.
 
@@ -1374,16 +1338,14 @@ and part-time opportunities.
 
 <a
 href="mailto:melbinandree09@gmail.com"
-class="btn primary"
+class="btn btn-primary"
 >
 
 ✉ Contact Me
 
 </a>
 
-
 </div>
-
 
 </section>
 
